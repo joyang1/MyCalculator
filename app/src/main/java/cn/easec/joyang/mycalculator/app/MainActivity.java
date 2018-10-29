@@ -1,6 +1,6 @@
 package cn.easec.joyang.mycalculator.app;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
     Button btn_0;
     Button btn_1;
     Button btn_2;
@@ -117,6 +117,11 @@ public class MainActivity extends ActionBarActivity {
                 case R.id.btn_reduce:
                 case R.id.btn_multiply:
                 case R.id.btn_divide:
+//                    if(str.contains("+") || str.contains("-") || str.contains("×")
+//                            || str.contains("÷")){
+//                        getResult();
+//                        break;
+//                    }
                     if (needclear) {
                         str = "";
                         et_input.setText(str);
@@ -129,9 +134,11 @@ public class MainActivity extends ActionBarActivity {
                         str = str.substring(0, str.length() - 1);
                         et_input.setText(str);
                     }
+                    //needclear = false;
                     break;
                 case R.id.btn_clear:
                     et_input.setText("");
+                    needclear = false;
                     break;
                 case R.id.btn_equal:
                     getResult();
@@ -151,7 +158,7 @@ public class MainActivity extends ActionBarActivity {
             int spacePosition = expression.indexOf(' ');//搜索空格的位置
             String str1 = expression.substring(0, spacePosition);//第一个操作数
             String option = expression.substring(spacePosition + 1, spacePosition + 2);
-            String str2 = expression.substring(spacePosition + 3);//第二个操作数
+            String str2 = expression.substring(spacePosition + 3, spacePosition + 4);//第二个操作数
             if (str1.equals("")) {
                 str1 = "0";
             }
