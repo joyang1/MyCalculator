@@ -158,7 +158,7 @@ public class MainActivity extends Activity {
             int spacePosition = expression.indexOf(' ');//搜索空格的位置
             String str1 = expression.substring(0, spacePosition);//第一个操作数
             String option = expression.substring(spacePosition + 1, spacePosition + 2);
-            String str2 = expression.substring(spacePosition + 3, spacePosition + 4);//第二个操作数
+            String str2 = expression.substring(spacePosition + 3);//第二个操作数
             if (str1.equals("")) {
                 str1 = "0";
             }

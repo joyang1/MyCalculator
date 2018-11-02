@@ -67,6 +67,53 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_sin"
+                    android:layout_width="87dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/btn_select"
+                    android:text="sin"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btn_cos"
+                    android:layout_width="87dp"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/btn_select"
+                    android:text="cos"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btn_log10"
+                    android:layout_width="87dp"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/btn_select"
+                    android:text="log10"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btn_abs"
+                    android:layout_width="87dp"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/btn_select"
+                    android:text="abs"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
